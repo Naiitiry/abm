@@ -9,7 +9,7 @@ function guardar() {
         precio: p,
         stock: s
     }
-    let url = "rdanchuk.pythonanywhere.com/productos"
+    let url = "http://rdanchuk.pythonanywhere.com/productos"
     var options = {
         body: JSON.stringify(producto),
         method: 'POST',
