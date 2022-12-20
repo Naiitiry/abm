@@ -9,19 +9,19 @@ for (let i = 0; i < args.length; ++i) {
 //decodeUriComponent elimina los caracteres especiales que recibe en la URL 
 document.getElementById("txtId").value = decodeURIComponent(parts[0][1])
 document.getElementById("txtNombre").value = decodeURIComponent(parts[1][1])
-document.getElementById("txtPrecio").value = decodeURIComponent(parts[2][1])
-document.getElementById("txtStock").value =decodeURIComponent( parts[3][1])
+document.getElementById("txtRaza").value = decodeURIComponent(parts[2][1])
+document.getElementById("txtEdad").value =decodeURIComponent( parts[3][1])
 function modificar() {
     let id = document.getElementById("txtId").value
     let n = document.getElementById("txtNombre").value
-    let p = parseFloat(document.getElementById("txtPrecio").value)
-    let s = parseInt(document.getElementById("txtStock").value)
+    let p = document.getElementById("txtRaza").value
+    let s = parseInt(document.getElementById("txtEdad").value)
     let producto = {
         nombre: n,
-        precio: p,
-        stock: s
+        raza: p,
+        edad: s
     }
-    let url = "http://rdanchuk.pythonanywhere.com/productos/"+id
+    let url = "https://rdanchuk.pythonanywhere.com/productos/"+id
     var options = {
         body: JSON.stringify(producto),
         method: 'PUT',
