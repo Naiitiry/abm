@@ -7,7 +7,7 @@ if (document.getElementById("app")) {
                 productos: [],
                 errored: false,
                 loading: true,
-                url: "http://rdanchuk.pythonanywhere.com/productos"
+                url: "https://rdanchuk.pythonanywhere.com/productos"
                 }
         },
         methods: {
@@ -23,7 +23,7 @@ if (document.getElementById("app")) {
                     })
             },
             eliminar(producto) {
-                const url = 'http://rdanchuk.pythonanywhere.com/productos/' + producto;
+                const url = 'https://rdanchuk.pythonanywhere.com/productos/' + producto;
                 var options = {
                     method: 'DELETE',
                 }
