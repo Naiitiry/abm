@@ -1,13 +1,13 @@
 function guardar() {
 
     let n = document.getElementById("txtNombre").value
-    let p = parseFloat(document.getElementById("txtPrecio").value)
-    let s = parseInt(document.getElementById("txtStock").value)
+    let p = document.getElementById("txtRaza").value
+    let s = parseInt(document.getElementById("txtEdad").value)
 
     let producto = {
         nombre: n,
-        precio: p,
-        stock: s
+        raza: p,
+        edad: s
     }
     let url = "http://rdanchuk.pythonanywhere.com/productos"
     var options = {
